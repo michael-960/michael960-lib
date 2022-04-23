@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 from .property import Ck
-from util.plotting import first_peak
+from ..plotting import first_peak
 
 
 #k = np.linspace(0, 10, 10000)

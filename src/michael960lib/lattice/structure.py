@@ -1,5 +1,5 @@
 import numpy as np
-from util.math import length
+from ..math import length
 
 
 def get_bcc_site(a, ml):

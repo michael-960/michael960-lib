@@ -1,6 +1,6 @@
 from .defin import DoubleWellPotential
 import numpy as np
-from util import math as mt
+import ..math as mt
 
 
 #quartic

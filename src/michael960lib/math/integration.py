@@ -1,6 +1,6 @@
 import sys
 import numpy as np
-from util.common import bcolors as bc
+from ..common import bcolors as bc
 from numpy.polynomial.legendre import leggauss as lg
 
 #integrate f within (0, 0, 0) (Lx, Ly, Lz)

@@ -2,7 +2,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from scipy.fftpack import fft, ifft
 import sys
-from util import math as mt
+import ..math as mt
 import pyfftw
 
 class DoubleWellSimulation:
