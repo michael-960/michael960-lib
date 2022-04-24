@@ -65,7 +65,6 @@ def generate_xk(L, N, center=False, real=False):
     return x, k, dx, dk
 
 
-
 def generate_xk_2d(Lx, Ly, Nx, Ny, real=False):
     x = np.linspace(0, Lx, Nx+1)[:-1]
     y = np.linspace(0, Ly, Ny+1)[:-1]

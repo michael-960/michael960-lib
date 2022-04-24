@@ -1,4 +1,4 @@
-from util.file_util import path as pt
+from ..file_util import path as pt
 import json, ujson
 import socket
 from os.path import isfile

@@ -11,7 +11,6 @@ def first_peak(S):
     return ind
 
 
-
 def val_to_ind(x, x0):
     for i in range(len(x)-1):
         if x[i] <= x0 <= x[i+1]:
@@ -37,6 +36,7 @@ def first_der(x, v, i, rng):
     (a, b, c, d, e, f, g) = p
 
     return b + 2*c*x0 + 3*d*x0**2 + 4*e*x0**3 + 5*f*x0**4 + 6*g*x0**5
+
 
 def test_pol(x, a, b, c, d, e, f, g):
     return a + b*x + c*x**2 + d*x**3 + e*x**4 + f*x**5 + g*x**6

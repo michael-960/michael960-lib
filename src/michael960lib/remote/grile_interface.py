@@ -1,4 +1,4 @@
-from util.file_util import path
+from ..file_util import path
 from griled.grile import Grile
 
 

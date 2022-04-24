@@ -3,7 +3,7 @@ import pathlib
 import pprint
 import os
 import numpy as np
-from ..file_util import path as pt
+from .file_util import path as pt
 #interface for various
 
 #datapath = str(pathlib.Path(__file__).parent.parent.parent.absolute()) + '/data/'

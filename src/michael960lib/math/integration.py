@@ -3,6 +3,7 @@ import numpy as np
 from ..common import bcolors as bc
 from numpy.polynomial.legendre import leggauss as lg
 
+
 #integrate f within (0, 0, 0) (Lx, Ly, Lz)
 def integrate_with_leggauss(f, deg, Lx, Ly, Lz, note=''):
     print(f'integrating {note}')

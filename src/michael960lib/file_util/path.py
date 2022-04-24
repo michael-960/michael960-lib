@@ -1,6 +1,5 @@
 import sys
 import pathlib
-import inspect
 from pprint import pprint
 import __main__
 

@@ -1,8 +1,8 @@
-from util.file_util.path import get_project_root, get_compute_root, get_running_script, get_elements, get_home
+from ..file_util.path import get_project_root, get_compute_root, get_running_script, get_elements, get_home
 import __main__
 import json
 from .remote import record_json, record, at_server
-from util.file_util.data import ndarray_to_list as tolist
+from ..file_util.data import ndarray_to_list as tolist
 from .logging import get_log, Logger
 import os
 import pathlib

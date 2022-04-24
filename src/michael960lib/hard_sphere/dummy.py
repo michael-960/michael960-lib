@@ -3,7 +3,6 @@ from matplotlib import pyplot as plt
 from .property import Ck
 from ..plotting import first_peak
 
-
 #k = np.linspace(0, 10, 10000)
 
 def fake_Ck_1(k, R, eta):
@@ -12,7 +11,6 @@ def fake_Ck_1(k, R, eta):
     C = 60
     k = np.where(k < B/R * 1e-7, B/R * 1e-7, k)
     return -C / A**2 * B**2 * np.sin((k*R/B)**2) / (k*R/A)**2
-
 
 
 def fake_Ck_2(q, R, eta):
@@ -28,6 +26,7 @@ def fake_Ck_2(q, R, eta):
  
     SCALE = 0.25
     return  4 * np.pi / k * (C0) * SCALE
+
 
 def fake_Ck_3(q, R, eta):
     k = np.where(q<1e-1, 1e-1, q)

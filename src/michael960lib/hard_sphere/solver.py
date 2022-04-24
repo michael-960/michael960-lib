@@ -1,5 +1,5 @@
 from .property import C, Ck
-import util.math as mt
+from .. import math as mt
 
 
 class HarmonicSolver:
