@@ -6,7 +6,32 @@ from numbers import Number
 
 import os
 import re
+
 import readline
+import warnings
+
+
+def overrides(interface_class):
+    def overrider(method):
+        assert(method.__name__ in dir(interface_class))
+        return method
+    return overrider
+
+def deprecated(message):
+    def deprecator(func):
+        def wrapper(*args, **kwargs):
+            warnings.warn(message, DeprecationWarning)
+            return func(*args, **kwargs)
+        return wrapper
+    return deprecator
+
+def experimental(message):
+    def dec(func):
+        def wrapper(*args, **kwargs):
+            warnings.warn(message, RuntimeWarning)
+            return func(*args, **kwargs)
+        return wrapper 
+    return dec
 
 
 class bcolors:
@@ -149,11 +174,6 @@ class Completer(object):
         return results[state]
 
 
-def overrides(interface_class):
-    def overrider(method):
-        assert(method.__name__ in dir(interface_class))
-        return method
-    return overrider
 
 
 
