@@ -1,5 +1,9 @@
+from __future__ import annotations
+from typing import Tuple
 import numpy as np
 from scipy import fftpack
+
+import numpy.typing as npt
 
 
 def fourier_transform(x, f):
@@ -46,18 +50,27 @@ def get_k(x):
     return k
 
 
-#####
-def generate_xk(L, N, center=False, real=False):
+def generate_xk(
+        L: np.floating|float, N: int, 
+        center: bool=False, 
+        real: bool=False
+        ) -> Tuple[npt.NDArray[np.floating], npt.NDArray[np.floating],
+                np.floating, np.floating]:
+    '''
+    Generate x and k for Fourier transform given system size (L) and number of
+    samples (N)
+    '''
+    if isinstance(L, (float, int)): L = np.double(L)
+
     x = np.linspace(0, L, N+1)[:-1]
-    dx = L/N
+    dx = L / N
     dk = np.pi*2 / L
 
-    M = N//2
+    M = N // 2
     k = np.array([n*dk for n in range(0, M)] + [n*dk for n in range(M-N, 0)])
 
     if center:
         x = np.linspace(-L/2, L/2, N+1)[:-1]
-
 
     if real:
         k = np.array([n*dk for n in range(M+1)])
